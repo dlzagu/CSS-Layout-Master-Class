@@ -1,0 +1,30 @@
+1.1
+display 프로퍼티의 value 중 inline-block은 요소들을 옆으로 나란히 배치시키는 inline의 주요 특성과 width, height를 가질 수 있는 block의 주요 특성을 동시에 지닌다. 
+그런데 inline-block의 문제점은 의도치 않게도 요소들 사이에 공백이 있다는 점과 특정 기기의 브라우저 사이즈에 맞게 디자인을 유연하게 맞출 수 없다는 점이 있다.
+이 점을 보완한 display 의 value 가 flex(display: flex;). flexbox의 규칙은 배치를 원하는 요소들(children)의 parent 요소를 flexbox로 지정해야 한다는 것이다.
+flexbox는 children과 이야기하지 않는다는 것을 잊어선 안 된다.
+
+1.2
+flex의 세계에는 두 가지가 있다.
+
+1. row(행): 가로를 의미한다.
+2. column(열): 세로를 의미한다.
+
+flex container의 flex-direction 기본 값은 row다. 이때 해당 row에 있는 item의 위치를 변경시키기 위해서는 justify-content를 사용하는데 수평 축에 있는 flex children의 위치를 변경한다. (flex container에서는 부모가 자식의 위치를 변경한다는 것이 저번 수업의 핵심 내용이었다.)
+
+이제 수평 축에 main-axis라는 멋드러진 이름을 붙여주자. 이 이름을 적용시켜 위 예시를 다시 생각해보면 다음과 같다.
+
+flex-direction의 기본 값이 row일 때 수평축이 곧 main-axis다. 다시 말해 가로가 곧 main-axis인 것이다.
+이때 main-axis에서 justify-content를 사용하면 item을 움직일 수 있는 것인데 main-axis가 수평축, 가로이기 때문에 가로로 item이 움직인다.
+
+다른 axis로는 cross-axis가 존재한다. flex container가 row을 가질 때 cross-axis는 단어 그대로 가로지르기 때문에 수직(vertical)이다.
+이때 cross-axis에서 item을 움직이기 위해서는 align-content를 사용한다. 수직, 세로로 움직이는 것이다.
+
+이는 차후 direction을 배울 때 매우 중요하므로 main-axis와 cross-axis 용어 및 개념을 잊지 말자.
+
+align-center를 사용할 때는 반드시 flex container(부모)의 높이가 어느 정도 되는지 반드시 확인하자. 이미 item과 높이가 동일하여 위치를 변환시킬 수 없는 경우가 많기 때문이다.
+
+1.3 
+flex direction 의 기본방향은 row (가로)
+row방향일때 : main axis =가로(justify-content) / Cross axis=세로(align-items)
+column방향일때 : main axis=세로(justify-content) / Cross axis=가로(align-items)
