@@ -1,20 +1,30 @@
-.wrapper{
+.father{
     display: flex;
     justify-content: space-around;
-    align-items: center ;
-    height: 200vh;
+    height: 100vh;
+    font-size:40px;
 
 }
 
-.box{
+.child{
     width: 200px;
     height: 200px;
     background: peru;
     color: white;
 }
 
+.child:nth-child(1){
+    order: 2;
+    align-self: center;
+}
 
+.child:nth-child(2){
+    order: 3;
+}
 /* 
-display 프로퍼티의 value 중 inline-block은 요소들을 옆으로 나란히 배치시키는 inline의 주요 특성과 width, height를 가질 수 있는 block의 주요 특성을 동시에 지닌다. 그런데 inline-block의 문제점은 의도치 않게도 요소들 사이에 공백이 있다는 점과 특정 기기의 브라우저 사이즈에 맞게 디자인을 유연하게 맞출 수 없다는 점이 있다.
-이 점을 보완한 display 의 value 가 flex(display: flex;). flexbox의 규칙은 배치를 원하는 요소들(children)의 parent 요소를 flexbox로 지정해야 한다는 것이다. flexbox는 children과 이야기하지 않는다는 것을 잊어선 안 된다.
+부모가 아닌 자식 아이템의 위치(position)를 직접 변경하고 싶을 때는 align-self와 order를 사용한다. 이때 유의할 점은 부모의 높이(heigth)가 설정되어 있어야 한다.
+
+align-self는 align-item과 같이 동작한다. 다시 말해 cross axis 방향에 있는 item의 위치를 바꾸게 된다.
+
+order의 경우 단어 그대로 순서를 바꾼다. 이때 기본 값(default)는 0이라 order를 1로 줄 경우 order를 주지 않은 것보다 뒤에 위치하게 된다. HTML을 통해 순서를 바꾸기 힘들 때 사용하면 좋다.
  */
