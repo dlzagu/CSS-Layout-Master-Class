@@ -35,3 +35,23 @@ column방향일때 : main axis=세로(justify-content) / Cross axis=가로(align
 align-self는 align-item과 같이 동작한다. 다시 말해 cross axis 방향에 있는 item의 위치를 바꾸게 된다.
 
 order의 경우 단어 그대로 순서를 바꾼다. 이때 기본 값(default)는 0이라 order를 1로 줄 경우 order를 주지 않은 것보다 뒤에 위치하게 된다. HTML을 통해 순서를 바꾸기 힘들 때 사용하면 좋다.
+
+1.5 wrap, nowrap, reverse, align-content
+- father, child 모두 flex로 해주면 child에 있던 글자가 중앙에 위치하게 됨
+
+1) flex-wrap
+- flexbox는 width보다도, '같은 줄'에 있도록 하는 것을 우선시함
+-> flex-wrap: wrap; (child의 사이즈를 유지하라고 하는 것)
+-> nowrap; (child를 모두 같은 줄에 정렬함, 이때 width가 줄어들 수 있음)
+
+2) reverse
+- flex-direction: row-reverse; (오른쪽에서부터 1이 시작)
+- column-reverse;
+- flex-wrap: wrap-reverse; (한 줄이 되지 않아도 아래에서 위로 정렬되게)
+
+* wrap으로 정렬 시 (여러 줄으로, 각 item의 width를 유지하면서)
+각 줄(기본: row) 간의 간격이 생기는데, 이것을 'align-content'라는 property로 조절 가능
+
+3) align-content (line을 변경, line은 cross-axis에 있는 상태)
+- justify-content와 비슷하지만 'line'에 관한 것 (각 block이 여러 행에 걸쳐 나올 때, 행간 공백을 얼마나 둘 건지?)
+- align-content: flex-start; - align-content: space-around;

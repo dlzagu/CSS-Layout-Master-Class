@@ -1,8 +1,10 @@
 .father{
     display: flex;
     justify-content: space-around;
+    align-content: space-between;
     height: 100vh;
     font-size:40px;
+    flex-wrap: wrap-reverse;
 
 }
 
@@ -11,20 +13,13 @@
     height: 200px;
     background: peru;
     color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-.child:nth-child(1){
-    order: 2;
-    align-self: center;
-}
-
-.child:nth-child(2){
-    order: 3;
-}
 /* 
-부모가 아닌 자식 아이템의 위치(position)를 직접 변경하고 싶을 때는 align-self와 order를 사용한다. 이때 유의할 점은 부모의 높이(heigth)가 설정되어 있어야 한다.
-
-align-self는 align-item과 같이 동작한다. 다시 말해 cross axis 방향에 있는 item의 위치를 바꾸게 된다.
-
-order의 경우 단어 그대로 순서를 바꾼다. 이때 기본 값(default)는 0이라 order를 1로 줄 경우 order를 주지 않은 것보다 뒤에 위치하게 된다. HTML을 통해 순서를 바꾸기 힘들 때 사용하면 좋다.
+align-content (line을 변경, line은 cross-axis에 있는 상태)
+- justify-content와 비슷하지만 'line'에 관한 것 (각 block이 여러 행에 걸쳐 나올 때, 행간 공백을 얼마나 둘 건지?)
+- align-content: flex-start; - align-content: space-around;
  */
