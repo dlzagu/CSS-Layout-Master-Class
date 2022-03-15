@@ -1,14 +1,14 @@
 .father{
     display: flex;
     justify-content: space-around;
-    align-content: space-between;
     height: 100vh;
-    font-size:40px;
-    flex-wrap: wrap-reverse;
+    
+ 
 
 }
 
 .child{
+    font-size:40px;
     width: 200px;
     height: 200px;
     background: peru;
@@ -17,6 +17,12 @@
     justify-content: center;
     align-items: center;
 }
+
+.child:nth-child(2) {
+    background: black;
+    flex-grow: 1;
+}
+
 
 /* 
 align-content (line을 변경, line은 cross-axis에 있는 상태)
