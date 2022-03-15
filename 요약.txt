@@ -67,3 +67,9 @@ ex) flex-wrap: nowrap일때, 화면이 작아지면 width가 설정되어있어�
 => 화면이 커질 때, element도 함께 커지길 원할 때 사용할 수 있음
 => flex-grow property가 0인 상태거나, 따로 정의되지 않았다면, 화면이 커져도 각 element 크기가 커지지 않음
 (여백만 늘어나게 됨)
+
+1.7flex-basis
+flex-basis
+
+shrink, grow 되기전에 element에게 초기 size를 주는 것.
+but 자주 사용 X basis 정의 안할시 width와 같은 값이니까.
