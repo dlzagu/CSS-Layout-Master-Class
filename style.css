@@ -1,0 +1,17 @@
+.wrapper{
+    display: flex;
+}
+
+.box{
+    width: 200px;
+    height: 200px;
+    background: peru;
+    color: white;
+}
+
+
+/* 
+display 프로퍼티의 value 중 inline-block은 요소들을 옆으로 나란히 배치시키는 inline의 주요 특성과 width, height를 가질 수 있는 block의 주요 특성을 동시에 지닌다. 그런데 inline-block의 문제점은 의도치 않게도 요소들 사이에 공백이 있다는 점과 특정 기기의 브라우저 사이즈에 맞게 디자인을 유연하게 맞출 수 없다는 점이 있다.
+이 점을 보완한 display 의 value 가 flex(display: flex;). flexbox의 규칙은 배치를 원하는 요소들(children)의 parent 요소를 flexbox로 지정해야 한다는 것이다. flexbox는 children과 이야기하지 않는다는 것을 잊어선 안 된다.
+ 
+ */
