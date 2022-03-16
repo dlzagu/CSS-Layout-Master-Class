@@ -3,7 +3,8 @@ color:white;
 display: grid;
 grid-gap: 5px;
 grid-template-columns: repeat(5, minmax(100px, 1fr));
-grid-template-rows: repeat(4, 100px);
+grid-template-rows: repeat(2, 100px);
+
 
 
 }
@@ -17,8 +18,15 @@ grid-template-rows: repeat(4, 100px);
 
 }
 
+.grid:first-child {
+    grid-template-columns:  repeat(auto-fill, minmax(100px,1fr));
+}
+.grid:last-child {
+    grid-template-columns:  repeat(auto-fit, minmax(100px,1fr));
+}
 
 /* 
-[minmax]
-- Grid-template-columns: repeat(10, minmax(100px, 1fr)); //최대 1fr로 하되 최소 100px너비
+[auto-fill, auto-fit]
+- Grid-template-columns: repeat(auto-fill, minmax(100px, 1fr)); //창 너비가 늘어나면 빈 column들로 row를 채움
+- Grid-template-columns: repeat(auto-fit, minmax(100px, 1fr)); // 창 너비가 늘어나면 element를 늘려서 row에 맞게 해줌
  */
