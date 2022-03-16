@@ -1,15 +1,12 @@
 .grid{
 color:white;
 display: grid;
-background: grey;
 grid-gap: 5px;
-height: 150vh;
 grid-template-columns: repeat(4, 100px);
 grid-template-rows: repeat(4, 100px);
-justify-content: center;
-align-content: space-around;
-
-
+grid-auto-rows: 100px;
+grid-auto-flow: column;
+grid-auto-columns: 100px;
 
 }
 
@@ -19,30 +16,30 @@ align-content: space-around;
   
     
 }
-.content{
-    background: #3498db;
-    
-    
-}
-.nav{
-    background: #8e44ad;
-   
-}
-.footer{
-    background: #f39c12;
-    
-}
+.item:nth-child(odd){
+    background-color: #2ecc71;
 
+}
+.item:nth-child(even){
+    background-color: #3498db;
 
+}
 
 
 /* 
-[place content]
-- Justify-content : start; (그리드가 놓이는 위치를 뜻하며 기본은 start)
-- Align-content는 수직적으로 그리드를 움직이는 것
-- Start, end, space-evenly, space-around, space-between 사용
-- 컨테이너의 height가 그리드를 담을 만큼 충분해야한다.(높이 지정)
-- Grid-template에서 높이를 fr로 설정하고 align-content를 stretch로 설정하면 쭉 늘어난다.
-- Place items와 마찬가지로 place-content를 통해 수직 수평으로 그리드 이동가능(첫번째가 수직, 두번째 옵션이 수평)
-- Place-items는 셀안에서 항목이 이동하는 것이며, place-content는 그리드가 이동하는 것이다.
+2.10 Auto Columns and Rows
+● align-self
+● justify-self
+● place-self: (수직) (수평);
+▷ child에만 적용돠는 property이다.
+
+● grid-auto-rows: (크기);
+▷ 만들어놓은 row보다 더 많은 content가 있으면, 자동으로 row를 만들어라.
+
+● grid-auto-flow: (방향); [기본값: row]
+▷ flex-direction과 비슷하다.
+▷ row가 끝날 때 새로운 row를 만들지, 새로운 column을 만들지 결정한다.
+
+● grid-auto-columns: (크기);
+▷ grid-auto-flow: column;일때 작동한다.
  */
