@@ -1,36 +1,42 @@
-.father{
-    display: flex;
-    justify-content: space-around;
-    width: 100%;
-    height: 100vh;
-    
+.grid{
+display: grid;
+grid-template-columns: auto 200px;
+grid-template-rows: 100px repeat(2, 200px) 100px;
+grid-template-areas: 
+    "header header header header"
+    "content content content nav"
+    "content content content nav"
+    "footer footer footer footer";
+
 }
 
-.child{
-   flex-basis: 30%;
-    background: peru;
-    color: white;
-    font-size:40px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.header{
+    background: #2ecc71;
+    grid-area: header;
+}
+.content{
+    background: #3498db;
+    grid-area: content;
+}
+.nav{
+    background: #8e44ad;
+    grid-area: nav;
+}
+.footer{
+    background: orange;
+    grid-area: footer;
 }
 
-.child:nth-child(2) {
-    background: black;
-    flex-grow: 0;
-}
+
 
 
 /* 
-1) flex-shrink: flexbox가 쥐어짤 때, element의 행동의 정의함
-ex) flex-wrap: nowrap일때, 화면이 작아지면 width가 설정되어있어도 줄어들지.
-- flex-shrink: 1; - flex-shrink: n(정수); --> 여러 개 element 중 특정 element만 덜 줄어들거나, 더 줄어들게 할 수 있음!!
+2.3 Grid Template Areas
+grid-template-columns 에 동일한 열의 너비를 주고, 또는 grid-template-rows 에 동일한 행의 높이를 준다고 할 때 repeat() 함수를 이용하면 유용하다.
+ex) grid-template-columns: 200px 200px 200px 200px => repeat(4, 200px)
 
-2) flex-grow: shrink와 반대, 화면이 늘어남에 따라 box 크기가 얼마나 늘어날까?
-- flex-grow: 1; - flex-grow: 0; - 남아있는 공간을 가져옴 (space를 없애고)
--> 즉, 남아있는 공간, 여백이 있을 때만 grow 가능
-=> 화면이 커질 때, element도 함께 커지길 원할 때 사용할 수 있음
-=> flex-grow property가 0인 상태거나, 따로 정의되지 않았다면, 화면이 커져도 각 element 크기가 커지지 않음
-(여백만 늘어나게 됨)
+grid-template-areas는 grid의 구조를 짜는 property이다.
+각 area 하나하나를 직접 무엇을 사용할 것인지 명시해 줌으로서 grid 구조를 만든다.
+
+grid-template-areas만 설정하면 원하는 대로 적용이 되지 않는다. grid 안의 children 요소들에게 grid-area property를 부여해서 값을 설정해야 한다. 신경써야 할 점은 grid-area의 value를 string(문자열)으로 쓰지 말 것.
  */
