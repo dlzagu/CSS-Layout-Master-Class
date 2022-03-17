@@ -139,3 +139,12 @@ fr값 비율로 공간을 나눈다.
 
 2.11[minmax]
 - Grid-template-columns: repeat(10, minmax(100px, 1fr)); //최대 1fr로 하되 최소 100px너비
+
+2.13 min-content max-content
+● max-content
+▷ content의 크기만큼 cell의 크기를 늘린다.
+● min-content
+▷ content의 크기를 최대한 줄여 cell의 크기를 줄인다.
+
+※ 어떻게 content가 보여야 하는지 디자인하는 것이다.
+※ repeat(), minmax와 결합하여 반응형 디자인을 만들 수 있다.
