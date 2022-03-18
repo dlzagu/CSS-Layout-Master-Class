@@ -148,3 +148,59 @@ fr값 비율로 공간을 나눈다.
 
 ※ 어떻게 content가 보여야 하는지 디자인하는 것이다.
 ※ repeat(), minmax와 결합하여 반응형 디자인을 만들 수 있다.
+
+#3.2 Mixins 
+
+@mixin link($word) {
+    text-decoration: none;
+    display: block;
+    @if $word == "odd" {
+        color: blue;
+    }@else{
+        color: red;
+    }
+
+}
+---------------------------------------------------------
+
+@import "_variables";
+@import "_mixins";
+
+a{
+  margin-bottom: 10px;
+  &:nth-child(odd) {
+  @include link("odd");
+  }
+  &:nth-child(even) {
+  @include link("even");
+  }
+}
+
+상황에 따라 다르게 스타일하고 싶을때 쓰는 것이 mixin 
+
+
+3.3 Extends (05:21)
+
+% << 붙이기
+EX)
+%button{
+    font-family: inherit;
+    border-radius: 7px;
+    font-size: 12px;
+    text-transform: uppercase;
+    padding: 5px 10px;
+    background-color: peru;
+    color:white;
+    font-weight: 500;
+}
+사용 하기 
+
+a {
+  @extend %button;
+  text-decoration: none;
+}
+
+button {
+  @extend %button;
+  border: none;
+}
