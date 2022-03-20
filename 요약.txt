@@ -204,3 +204,23 @@ button {
   @extend %button;
   border: none;
 }
+'
+3.4 Awesome Mixins and Conclusions
+awesome SCSS Mixins 검색 라이브러리 찾기 
+
+4.1
+색추출 : ColorZilla
+사이즈 : Page Ruler Redux
+letter-spacing
+letter-spacing CSS 속성은 글자 사이의 간격을 조절합니다.
+
+box-shadow: x(수평거리) y(수직거리) blur(흐릿함) spread(확산정도) *inset *색상
+
+inset: inset 키워드가 존재하면 요소안, 배경색 위, 내부 컨텐츠 밑에 그려짐
+
+text-transform: uppercase >> 모든글자를 대문자로 변경 
+
+4.3 
+transition 
+
+
