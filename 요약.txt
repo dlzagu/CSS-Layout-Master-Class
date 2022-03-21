@@ -222,5 +222,34 @@ text-transform: uppercase >> 모든글자를 대문자로 변경
 
 4.3 
 transition 
+body >*:not(.footer){
+  padding: 0px 140px;
+}
+
+4.5
+
+transition: color 0.3s linear, background-color 0.3s linear;
+white-space: nowrap; 
+.scrolling__text{
+  color:black;
+  grid-column: 2 / -2;  
+  white-space: nowrap;
+  overflow: hidden;
+  font-size: 18px;
+  span{
+    animation: scrollText 4s linear infinite forwards;
+  }
+}
+
+@keyframes scrollText{
+  0%{
+    transform: translateX(-140px);
+  }
+  50% {
+    transform: translateX(200px);
+    }
+  100%{
+    transform: translateX(-140px);
+  }
 
 
