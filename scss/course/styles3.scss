@@ -1,0 +1,112 @@
+@import "reset.scss";
+@import "_variables";
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap');
+@import "_title";
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&family=Playfair+Display:ital@1&display=swap');
+
+*{
+  box-sizing: border-box;
+}
+body{
+  width: 100%;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  header{
+    width: 100%;
+    font-size: 30px;
+    line-height: 44px;
+    display:grid;
+    grid-template-columns: 2fr 1fr;
+    position: fixed;
+    top: 0;
+    left: 0;
+    nav{
+      width: 100%;
+      display: flex;
+      background-color: white;
+      color:#E0E1E2;
+      transition: color linear;
+       &:hover {
+        background-color: #E0E1E2;
+        color:black;
+       }
+      .brand__name{
+      width: 17%;
+      color:black;
+       justify-content: center;
+       align-items: center;
+       padding-right: 73px;
+       transition: color linear;
+       &:hover {
+        color:white;
+       }
+      }
+      ul{
+        
+        justify-content: center;
+        align-items: center;
+        display: flex;
+        transition: color linear;
+       &:hover {
+        color:white;
+       }
+        li{
+          margin-right: 50px ;
+          font-size: 30px;
+          line-height: 44px;
+          
+          }
+        }  
+      }
+    }
+    .right__panel{
+      background-color: white;
+      width: 100%;
+      padding: 0 10px;
+      display: flex;
+      justify-content: space-between;
+      transition: color linear;
+       &:hover {
+        background-color: #E0E1E2;
+        color:black;
+       }
+       ul{
+         display: flex;
+         
+         
+          li{
+          margin-right: 75px;
+        }
+      }
+    }
+  }
+  .en{
+    font-size: 14px;
+    align-items: flex-end;
+  }
+  .hero{
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    div{
+      margin-bottom: 36px;
+      span{
+        justify-content: flex-start;
+        padding: 5px;
+        align-items: center;
+        display: flex;
+        text-transform: uppercase;
+        font-size: 14px;
+        height: 32px;
+        
+        
+      }
+    }
+    img{
+      width: 100%;
+      height: 100%;
+      
+    }
+  }
+  
+
+
