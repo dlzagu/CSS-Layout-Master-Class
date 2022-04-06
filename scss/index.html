@@ -6,6 +6,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="stylesheet" href="dist/css/styles.css" />
   <title>(S)CSS Masterclass</title>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+    integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
 </head>
 
 <body>
@@ -49,13 +51,22 @@
       CUURY CAFE! CUURY CAFE! & NORTHCOTE! NUMBER ONE BEST QUALITY!  VEG & NON. VEG! CURRY CAFE! CUURY CAFE! CUURY CAFE! & NORTHCOTE! NUMBER ONE BEST QUALITY!  VEG & NON. VEG! CURRY CAFE!
       CUURY CAFE! CUURY CAFE! & NORTHCOTE! NUMBER ONE BEST QUALITY!  VEG & NON. VEG! CURRY CAFE! CUURY CAFE! CUURY CAFE! & NORTHCOTE! NUMBER ONE BEST QUALITY!  VEG & NON. VEG! CURRY CAFE!
       CUURY CAFE! CUURY CAFE! & NORTHCOTE! NUMBER ONE BEST QUALITY!  VEG & NON. VEG! CURRY CAFE! CUURY CAFE! CUURY CAFE! & NORTHCOTE! NUMBER ONE BEST QUALITY!  VEG & NON. VEG! CURRY CAFE!
-      
+
     </div>
    </footer>
    
       
     
   </div>
+  <script>
+    $('.header-title').on('mouseover', function(){
+      $('.header-title').css('animation', 'none');
+    });
+    $('.header-title').on('mouseout', function(){
+      $('.header-title').css('animation', 'scrollText 4s linear infinite forwards');
+      console.log('out');
+    })
+  </script>
 
 </body>
 
