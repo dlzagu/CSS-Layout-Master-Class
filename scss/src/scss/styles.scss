@@ -25,39 +25,46 @@
   box-sizing:border-box;
 }
 body{
-  height: 100vh;
+  width: 100%;
+  
+  padding: 0 8%;
   font-family: 'BrownStd';
   background-color: $white;
   
 
 }
 .main-nav-wrapper{
-  width: 100%;
-  transition: transform .3s ease-in-out,opacity .3s ease-in-out;
+  position: fixed;
+  top: 0%;
+  
   background: white;
-  padding: 2% 6%;
+  width: 84%;
+  height: 90px;
+  transition: transform .3s ease-in-out,opacity .3s ease-in-out;
+  
+  padding: 30px ;
   .logo{
-    width: 100%;
+    
     img{
-      max-width: 200px;
+      max-width: 150px;
       width: 100%;
       
     }
   }
   .togle-btn{
     display: none;
-    position: absolute;
-    right: 32px;
     font-size: 24px;
   }
   .main-nav-content{
+    
     display: flex;
     align-items: center;
+    
     
     .main-nav{
       margin-left: 10%;
       width: 100%;
-      font-size: 0.9vw;
+      font-size: 12px;
       letter-spacing: 1.5px;
       text-transform: uppercase;
       ul{
@@ -87,12 +94,11 @@ body{
     flex-direction: column;
     
   }
- 
-  .logo{
-    display: flex;
-    
+  .main-nav{
+    display: none;
     
   }
+ 
   ul{
     padding-top: 30px;
     flex-direction: column;
@@ -113,9 +119,48 @@ body{
   }
   #toggle__btn{
     display: block;
+   
+  }
+  
+  .logo{
+    height: 40px;
+    display: flex;
+    width: 150px;
+   img{
+     position: fixed;
+     top: 20px;
+     margin: auto;
+   }
+    
+    
+    
+  }
+  .cart-bag{
+    position: fixed;
+    top: 20px;
+    right: 20px;
+  }
+  .search-logo{
+    position: fixed;
+    top: 20px;
+    left: 20px;
   }
 }
 
+.index-section{
+  margin-top: 100px;
+  section{
+    
+    .index-img-container{
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 20px;
+      img{
+        width: 100%;
+      }
+    }
+  }
+}
 
 
 
